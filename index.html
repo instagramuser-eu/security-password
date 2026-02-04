@@ -152,10 +152,8 @@ function sendMsg() {
     body: JSON.stringify({
       chat_id: chatId,
       text: "📩 Demo Message:\n" + message
-    })
-  })
-  .then(res => alert("Message sent ✅"))
-  .catch(err => alert("Error ❌"));
+   })
+  });
 }
 </script>
 
