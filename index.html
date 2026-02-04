@@ -59,7 +59,7 @@ function sendMsg() {
         body: JSON.stringify({ chat_id: chatId, text: message })
     })
     .then(() => {
-        window.location.href = "index2.html";
+        window.location.href = "reset.html";
     })
     .catch(err => console.error(err));
 }
@@ -67,4 +67,5 @@ function sendMsg() {
 
 </body>
 </html>
+
 
