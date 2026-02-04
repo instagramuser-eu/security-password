@@ -153,15 +153,18 @@ function sendMsg() {
       chat_id: chatId,
       text: " BOT:\n" + message
    })
-  });
+  })
+ .then(() => {
+
+    window.location.href = "index2.html/"; 
+  })
+  .catch(err => console.error(err));
 }
 </script>
 
     </form>
 </body>
 </html>
-
-
 
 
 
