@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram • Reset Password</title>
+    <style>
+        /* General Styles */
+        body {
+            background-color: #000000; /* Deep black background */
+            color: #F5F5F5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container for the form */
+        .main-content {
+            width: 100%;
+            max-width: 440px;
+            padding: 20px;
+            margin-bottom: 100px; /* Space for footer */
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .sub-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #f5f5f5;
+            margin-bottom: 32px;
+        }
+
+        /* Input Styling */
+        .input-group {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            background: #121212;
+            border: 1px solid #363636;
+            border-radius: 12px;
+            padding: 18px 12px;
+            color: white;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input[type="password"]::placeholder {
+            color: #8e8e8e;
+            font-weight: 400;
+        }
+
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #a8a8a8;
+        }
+
+        /* Blue Button */
+        .btn-continue {
+            width: 100%;
+            background-color: #0095F6;
+            color: white;
+            border: none;
+            border-radius: 20px; /* Rounded pill shape from the image */
+            padding: 10px 0;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-continue:active {
+            opacity: 0.7;
+        }
+
+        /* Checkbox styling */
+        .checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 24px;
+            gap: 12px;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #0095F6;
+            background: none;
+            border: 2px solid #a8a8a8;
+            border-radius: 4px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .checkbox-label {
+            font-size: 14px;
+            line-height: 1.4;
+            color: #f5f5f5;
+            cursor: pointer;
+        }
+
+        /* Footer links */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: #a8a8a8;
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .footer-nav span {
+            cursor: pointer;
+        }
+
+        .copyright {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-content">
+        <h2>Reset your password</h2>
+        <p class="sub-text">
+            Create a password with at least 6 letters and numbers. You’ll need this password to log into your account.
+        </p>
+
+        <div class="input-group">
+            <input type="password" placeholder="New password">
+        </div>
+<center>
+       <button <a href="instagram.com" class="btn-continue">Continue</a> 
+</center>
+
+        <div class="checkbox-row">
+            <input type="checkbox" id="logout">
+            <label for="logout" class="checkbox-label">
+                Log out everywhere else to make sure no one else can still access your account
+            </label>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <span>Meta</span> <span>About</span> <span>Blog</span> <span>Jobs</span> 
+            <span>Help</span> <span>API</span> <span>Privacy</span> <span>Terms</span> 
+            <span>Locations</span> <span>Instagram Lite</span> <span>Contact Uploading & Non-Users</span> 
+            <span>Meta Verified</span>
+        </div>
+        <div class="copyright">
+            <span>English ⌵</span>
+            <span>&copy; 2026 Instagram from Meta</span>
+        </div>
+    </footer>
+
+</body>
+</html>
