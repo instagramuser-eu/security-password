@@ -137,26 +137,10 @@
         </footer>
     </div>
 
-    <script>
-        // JavaScript - The Logic
-        const form = document.getElementById('resetForm');
-        
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevents page from refreshing
-            
-            const password = document.getElementById('newPassword').value;
-            const logoutEverywhere = document.getElementById('logoutOthers').checked;
 
-            if (password.length < 6) {
-                alert("Password is too short! Please use at least 6 characters.");
-            } else {
-                console.log("Password updated. Force logout: " + logoutEverywhere);
-                alert("Success! Your password has been reset.");
-            }
-        });
-    </script>
 
 </body>
 </html>
+
 
 
